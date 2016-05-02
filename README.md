@@ -1,5 +1,7 @@
 # range-tree
 
+[![Build status](https://circleci.com/gh/clearhaus/range-tree.svg?style=shield)](https://circleci.com/gh/clearhaus/range-tree)
+
 This library is an extended version of the well-known data structure [interval
 tree](https://en.wikipedia.org/wiki/Interval_tree#Augmented_tree).
 
