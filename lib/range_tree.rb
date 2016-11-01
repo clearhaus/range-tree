@@ -1,11 +1,11 @@
 class RangeTree
   class Node
-    def initialize(left, range, right, min, max)
-      @left  = left
-      @range = range
-      @right = right
-      @min   = min || range.min
-      @max   = max || range.max
+    def initialize(range, left, right, min, max)
+      @range = range # Data, the range in this node.
+      @left  = left  # Left child.
+      @right = right # Right child.
+      @min   = min || range.min # Subtree's min.
+      @max   = max || range.max # Subtree's max.
     end
     attr_reader :left, :range, :right, :min, :max
   end
@@ -31,7 +31,8 @@ class RangeTree
 
     ary = [left, range, right].compact
 
-    Node.new(left, range, right,
+    Node.new(range,
+             left, right, # Childs.
              ary.map(&:min).min, # Subtree's min.
              ary.map(&:max).max) # Subtree's max.
   end
