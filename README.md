@@ -21,5 +21,5 @@ ranges = [1..2, 2..3, 3..4, 4..5]
 tree = RangeTree.new(ranges)
 
 tree.search(3..4)
-# => [2..3, 3..4]
+# => [2..3, 3..4, 4..5]
 ```
